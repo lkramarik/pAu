@@ -1654,7 +1654,7 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				pt_kaon_us->push_back(kaon4P.perp());
 				pt_pion_us->push_back(pion4P.perp());
 				pt_D0_us->push_back(D0_4P.perp());
-				h_inv_mass_US_pt[j_kaon_pt-1][j_d0_pt-1]->Fill(inv_mass);
+				//h_inv_mass_US_pt[j_kaon_pt-1][j_d0_pt-1]->Fill(inv_mass);
 				h_pt_US->Fill(PT);
 				h_kaon_pt_US->Fill(kaon4P.perp());
 				h_pion_pt_US->Fill(pion4P.perp());
