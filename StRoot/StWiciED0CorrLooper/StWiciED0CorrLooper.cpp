@@ -1049,7 +1049,7 @@ void StWiciED0CorrLooper::ProcessEvent(WiciEvent* event, const Bool_t mixed) {
 	v_kaons_pos_sigmaDedx.clear();
 	v_kaons_pos_sigmaTof.clear();
 	//vector<StLorentzVectorD> v_kaons, v_K0s;
-	//loop over charged particles
+	//loop over charged particles in event
 	for(Int_t p1=0; p1<nAllParts; p1++) {
 		/*
 		cout << "particle "<< p1 << endl;
@@ -1149,7 +1149,7 @@ void StWiciED0CorrLooper::ProcessEvent(WiciEvent* event, const Bool_t mixed) {
 			} 
 		}
 
-		double pt_track = GetParticleMomentum(fstPart).Pt();
+		double     = GetParticleMomentum(fstPart).Pt();
 		double p_track = GetParticleMomentum(fstPart).Mag();
 		bool kaon_OK = true;
 		double nsigtofk = GetSigmaTof(fstPart, KAON);
@@ -1649,7 +1649,7 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				//cout << "original method: " << j_d0_pt << " new method: " << index << endl;
 
 				h_inv_mass_US->Fill(inv_mass);
-				/*
+				//uncommented 060317
 				inv_mass_us->push_back(inv_mass);
 				pt_kaon_us->push_back(kaon4P.perp());
 				pt_pion_us->push_back(pion4P.perp());
@@ -1658,7 +1658,7 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				h_pt_US->Fill(PT);
 				h_kaon_pt_US->Fill(kaon4P.perp());
 				h_pion_pt_US->Fill(pion4P.perp());
-				*/
+				//end uncommented 060317
 				h_inv_mass_US_Kminus->Fill(inv_mass);
 				h_inv_mass_US_Kminus_vs_pt->Fill(inv_mass, PT);
 				/*
@@ -1756,12 +1756,12 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				*/
 				//h_inv_mass_LS_pt[j_kaon_pt-1][j_d0_pt-1]->Fill(inv_mass);
 				h_inv_mass_LS->Fill(inv_mass);
-				/*
+				// uncommented 060317
 				inv_mass_ls->push_back(inv_mass);
 				pt_kaon_ls->push_back(kaon4P.perp());
 				pt_pion_ls->push_back(pion4P.perp());
 				pt_D0_ls->push_back(D0_4P.perp());
-				*/
+				//end uncommented 060317
 				h_inv_mass_LS_neg->Fill(inv_mass);
 				//h_pt_LS->Fill(PT);
 				//if (inv_mass > 0.722 && inv_mass < 0.725) {
@@ -1821,7 +1821,7 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				//h_inv_mass_US_pt[j_kaon_pt-1][j_d0_pt-1]->Fill(inv_mass);
 
 				h_inv_mass_US->Fill(inv_mass);
-				/*
+				//uncommented 060317
 				inv_mass_us->push_back(inv_mass);
 				pt_kaon_us->push_back(kaon4P.perp());
 				pt_pion_us->push_back(pion4P.perp());
@@ -1829,7 +1829,7 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				h_pt_US->Fill(PT);
 				h_kaon_pt_US->Fill(kaon4P.perp());
 				h_pion_pt_US->Fill(pion4P.perp());
-				*/
+				//end uncommented 060317
 				h_inv_mass_US_Kplus->Fill(inv_mass);
 				h_inv_mass_US_Kplus_vs_pt->Fill(inv_mass, PT);
 				/*
@@ -1926,12 +1926,12 @@ void StWiciED0CorrLooper::do_D0(bool do_mix = false){
 				*/
 				//h_inv_mass_LS_pt[j_kaon_pt-1][j_d0_pt-1]->Fill(inv_mass);
 				h_inv_mass_LS->Fill(inv_mass);
-				/*
+				//uncommented 060317
 				inv_mass_ls->push_back(inv_mass);
 				pt_kaon_ls->push_back(kaon4P.perp());
 				pt_pion_ls->push_back(pion4P.perp());
 				pt_D0_ls->push_back(D0_4P.perp());
-				*/
+				//end uncommented 060317
 				h_inv_mass_LS_pos->Fill(inv_mass);
 				/*
 				h_pt_LS->Fill(PT);
