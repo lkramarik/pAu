@@ -1,4 +1,4 @@
-void do_mb(TString input_file = "/gpfs01/star/pwg/lkramarik/pAu/analysis/Chain_pAu_bhtvpdnobsmd.root", Char_t* fileName="test.root", Int_t firstEvent=0, Int_t nEvents=-1) {
+void do_mb(TString input_file = "/gpfs01/star/pwg/lkramarik/pAu/analysis/Chain_pAu_bhtvpdnobsmd.root", Char_t* fileName="test.root", Int_t firstEvent=0, Int_t nEvents=1000) {
 	TStopwatch timer;
 	timer.Start();
 	gROOT->ProcessLine(".x $STAR/StRoot/StMuDSTMaker/COMMON/macros/loadSharedLibraries.C");
