@@ -1149,7 +1149,7 @@ void StWiciED0CorrLooper::ProcessEvent(WiciEvent* event, const Bool_t mixed) {
 			} 
 		}
 
-		double     = GetParticleMomentum(fstPart).Pt();
+		double pt_track    = GetParticleMomentum(fstPart).Pt();
 		double p_track = GetParticleMomentum(fstPart).Mag();
 		bool kaon_OK = true;
 		double nsigtofk = GetSigmaTof(fstPart, KAON);
